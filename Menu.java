@@ -38,7 +38,7 @@ public class Menu {
 
         if(opcion_bebida == 1) {
 
-          cobro = 35;
+          cobro = 25;
 
         }
 
@@ -53,10 +53,48 @@ public class Menu {
           if(opcion_bebida == 1) {
 
             cobro = 30;
-            
+
+        }
+      }
+    } else if(opcion_menu == 2){
+
+      System.out.println("Elige tu platillo:");
+      System.out.println("1. Hamburguesa con refresco - $40");
+      System.out.println("2. Torta con agua - $35");
+
+      opcion_platillo = entrada.nextInt();
+
+      if(opcion_platillo == 1){
+
+        System.out.println("¿Cambias tu refresco por agua?");
+        System.out.println("1. Sí");
+        System.out.println("2. No");
+        cobro = 40;
+
+        opcion_bebida = entrada.nextInt();
+
+        if(opcion_bebida == 1) {
+
+          cobro = 35;
+
+        }
+
+        } else if(opcion_platillo == 2){
+
+          System.out.println("¿Cambias tu agua por refresco?");
+          System.out.println("1. Sí");
+          System.out.println("2. No");
+          cobro = 35;
+          opcion_bebida = entrada.nextInt();
+
+          if(opcion_bebida == 1) {
+
+            cobro = 40;
+
         }
       }
     }
+
 
     System.out.println("Total a pagar " + cobro);
 
