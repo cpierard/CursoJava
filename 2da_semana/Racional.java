@@ -67,6 +67,32 @@ public class Racional {
 
   }
 
+  //Método que simplifica una fracción.
+
+  public Racional simplifica(Racional r) {
+
+    int mcd = calculaMCD(r.p, r.q);
+    int 
+
+  }
+
+  public calculaMCD(int a, int b){
+
+    int aux = 0;
+    int r;
+
+    if(a < b){
+
+      aux = a;
+      a = b;
+      b = aux;
+
+    }
+    while(b != 0){
+      r = a%b;
+
+    }
+  }
   public String toString(){
 
     if(p == 0){

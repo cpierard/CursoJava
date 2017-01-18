@@ -13,13 +13,9 @@ public class UsoRacional {
     System.out.println(r4);
 
     System.out.println(r1.multiplicacion(r1, r2));
-
     System.out.println(r1.multiplicacion(r2));
-
     System.out.println(r4.multiplicacion(r3));
-
     System.out.println("La división de " + r1 + " entre " + r2 + " es " + r1.division(r2) );
-
     System.out.println("La sume de " + r1 + " y " + r2 + " es " + r1.suma(r2));
 
   }
