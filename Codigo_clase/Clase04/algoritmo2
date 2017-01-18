@@ -1,0 +1,13 @@
+
+Calcular todos los numeros primos de 1 a 100
+
+Desde i=1 hasta 100
+	contador=0
+	num=i
+	temporal=1
+	mientras temporal <= num:
+		Si temporal divide a num
+			contador++
+	Si contador==2
+		ES PRIMO
+
