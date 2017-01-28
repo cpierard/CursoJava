@@ -124,16 +124,41 @@ public class Memorama {
 	}
 
   public void jugar() {
-		int i=0;
-		int j=0;
-		System.out.println("Dime que carta quieres mostrar i-> 0-3 , j-> 0-3 ");
-		System.out.print("i: ");
-		i=entrada.nextInt();
-		System.out.println();
-		System.out.print("j: ");
-		j=entrada.nextInt();
+    barajar();
 
-     
-	}
+    int contador=1;
+    int i=0;
+    int j=0;
+    int i_2=0;
+    int j_2=0;
+    while(contador<=3){
+      imprimeTableroJuegoActivo();
+      System.out.println("Dime que carta quieres mostrar i-> 0-3 , j-> 0-3 ");
+      System.out.print("i: ");
+      i=entrada.nextInt();
+      System.out.println();
+      System.out.print("j: ");
+      j=entrada.nextInt();
+      adivinados[i][j]=true;
+      imprimeTableroJuegoActivo();
+      System.out.println("Dime que otra carta quieres mostrar i-> 0-3 , j-> 0-3 ");
+      System.out.print("i: ");
+      i_2=entrada.nextInt();
+      System.out.println();
+      System.out.print("j: ");
+      j_2=entrada.nextInt();
+      adivinados[i_2][j_2]=true;
+      imprimeTableroJuegoActivo();
+      if(memorama[i][j]==memorama[i_2][j_2]) {
+        adivinados[i][j]=true;
+        adivinados[i_2][j_2]=true;
+      } else {
+        adivinados[i][j]=false;
+        adivinados[i_2][j_2]=false;
+      }
+
+      contador++;
+    }
+  }
 
 }
